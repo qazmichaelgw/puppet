@@ -39,6 +39,7 @@ Package { allow_virtual => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 node master_cert{
+  include shellexecution
 }
 
 node default {
