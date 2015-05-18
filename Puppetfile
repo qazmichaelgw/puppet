@@ -13,3 +13,6 @@ mod "puppetlabs/ntp"
 #  :git => 'git://github.com/glarizza/puppet-profiles',
 #  :ref => '3611ae4253ff01762f9bda1d93620edf8f9a3b22'
 
+mod 'shellexecution',
+   :git => 'https://github.com/qazmichaelgw/shellexecution.git',
+   :ref => 'cb805d67059c4f0cccbad70b54a5ad491ef4ef29'
