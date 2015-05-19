@@ -2,8 +2,8 @@
 :backends:
   - yaml
 :hierarchy:
-  - "%{clientcert}"
-  - "%{application_tier}"
+  - "%{::clientcert}"
+  - "%{::environment}"
   - common
 
 :yaml:
