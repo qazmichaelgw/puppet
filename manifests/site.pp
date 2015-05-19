@@ -40,6 +40,9 @@ Package { allow_virtual => false }
 # specified in the console for that node.
 node master_cert{
   include shellexecution
+  class {"::ntp":
+	servers => 'se.nus.gw.172-29-34-66.6ehost.com',
+  }
 }
 
 node default {
