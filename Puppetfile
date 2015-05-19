@@ -14,4 +14,4 @@ mod "puppetlabs/ntp"
 #  :ref => '3611ae4253ff01762f9bda1d93620edf8f9a3b22'
 
 mod 'shellexecution',
-   :git => 'https://github.com/qazmichaelgw/shellexecution.git',
+   :git => 'https://github.com/qazmichaelgw/shellexecution.git'
