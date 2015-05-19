@@ -19,7 +19,7 @@
 
 # Define filebucket 'main':
 filebucket { 'main':
-  server => 'master',
+  server => 'se.nus.gw.172-29-34-66.6ehost.com',
   path   => false,
 }
 
