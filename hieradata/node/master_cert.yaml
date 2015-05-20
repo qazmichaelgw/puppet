@@ -1,0 +1,7 @@
+---
+ntp::restrict:
+  -
+ntp::autoupdate: false
+ntp::enable: true
+ntp::servers:
+  - se.nus.gw.172-29-34-66.6ehost.com

@@ -1,8 +1,8 @@
 ---
 :backends:
   - yaml
-:hierarchy:
-  - "%{::clientcert}"
+:hierarchy: 
+  - "node/%{::fqdn}"
   - "%{::environment}"
   - common
 
