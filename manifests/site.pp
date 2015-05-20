@@ -43,6 +43,9 @@ node master_cert{
   class {"::ntp":
 	servers => ['se.nus.gw.172-29-34-66.6ehost.com'],
   }
+  class {'zabbix::agent':
+        server => '127.0.0.1',
+  }
 }
 
 node default {
