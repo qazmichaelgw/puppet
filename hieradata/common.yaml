@@ -1,5 +1,7 @@
 ---
 message: "This node is using common data"
+classes:
+  - ntp
 ntp::autoupdate: false
 ntp::enable: true
 ntp::servers:
