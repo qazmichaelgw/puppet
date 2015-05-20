@@ -4,6 +4,7 @@ forge "http://forge.puppetlabs.com"
 #mod "puppetlabs/apache"
 mod "puppetlabs/ntp"
 mod "puppetlabs/mcollective"
+mod "puppetlabs/wdijkerman-zabbix"
 
 # Modules from Github using various references
 #mod 'notifyme',
