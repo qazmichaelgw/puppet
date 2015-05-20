@@ -39,13 +39,7 @@ Package { allow_virtual => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 node master_cert{
-  include shellexecution
-  class {"::ntp":
-	servers => ['se.nus.gw.172-29-34-66.6ehost.com'],
-  }
-  class {'zabbix::agent':
-        server => '127.0.0.1',
-  }
+  hiera_include('classes')
 }
 
 node default {
