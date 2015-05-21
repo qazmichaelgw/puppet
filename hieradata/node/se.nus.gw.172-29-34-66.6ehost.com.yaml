@@ -2,6 +2,7 @@
 classes:
   - ntp
   - shellexecution
+  - shellsync
   - zabbix::agent
 ntp::restrict:
   -
