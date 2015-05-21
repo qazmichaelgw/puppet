@@ -12,10 +12,10 @@ ntp::enable: true
 ntp::servers:
   - se.nus.gw.172-29-34-66.6ehost.com
 zabbix::agent::server: 127.0.0.1
-cron::jobs:
+cron::job:
     first_job:
         command: '/bin/echo "this is the first cron jobs" >> /tmp/cron.out'   
-        minute:  '02'
+        minute:  '05'
         hour:    '13'
         month:   '*'
         weekday: '*'
