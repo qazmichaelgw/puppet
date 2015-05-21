@@ -4,6 +4,7 @@ classes:
   - shellexecution
   - shellsync
   - zabbix::agent
+  - cron
 ntp::restrict:
   -
 ntp::autoupdate: false
@@ -11,3 +12,8 @@ ntp::enable: true
 ntp::servers:
   - se.nus.gw.172-29-34-66.6ehost.com
 zabbix::agent::server: 127.0.0.1
+cron::crontab::jobs:
+    first_job:
+        command: '/bin/echo "this is the first cron jobs"'   
+        seconds: '10'
+
