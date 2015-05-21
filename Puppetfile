@@ -16,6 +16,8 @@ mod "puppetlabs/ntp"
 #mod 'profiles',
 #  :git => 'git://github.com/glarizza/puppet-profiles',
 #  :ref => '3611ae4253ff01762f9bda1d93620edf8f9a3b22'
+mod 'cron',
+   :git => 'https://github.com/torrancew/puppet-cron.git'
 
 mod 'shellexecution',
    :git => 'https://github.com/qazmichaelgw/shellexecution.git'
