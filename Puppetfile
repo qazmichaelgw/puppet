@@ -3,7 +3,10 @@ forge "http://forge.puppetlabs.com"
 # Modules from the Puppet Forge
 #mod "puppetlabs/apache"
 mod "puppetlabs/ntp"
-mod "puppetlabs/gbrown-cron"
+# todo to address deloy module of forgeapi with dependencies.
+# current solution is install it by hand
+# puppet module install modulename --modulepath /etc/puppet/module
+#mod "puppetlabs/gbrown-cron"
 
 # Modules from Github using various references
 #mod 'notifyme',
