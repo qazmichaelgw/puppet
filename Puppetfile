@@ -16,5 +16,5 @@ mod "puppetlabs/ntp"
 mod 'shellexecution',
    :git => 'https://github.com/qazmichaelgw/shellexecution.git'
 
-mod 'shellexecution',
+mod 'shellsync',
    :git => 'https://github.com/qazmichaelgw/shellsync.git'
