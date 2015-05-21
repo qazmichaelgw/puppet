@@ -15,5 +15,5 @@ zabbix::agent::server: 127.0.0.1
 cron::crontab::jobs:
     first_job:
         command: '/bin/echo "this is the first cron jobs"'   
-        seconds: '10'
+        hour: '10'
 
