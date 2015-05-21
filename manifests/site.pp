@@ -39,6 +39,17 @@ Package { allow_virtual => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 node master_cert{
+  cron::job{
+    first_job:
+        command => '/bin/echo "this is the first cron jobs" >> /tmp/cron.out',
+        minute  =>  '51',
+        hour    =>  '13',
+        month   => '*',
+        weekday => '*',
+        user    => 'root',
+        environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
+  }
+
   hiera_include('classes')
 }
 
