@@ -15,8 +15,11 @@ zabbix::agent::server: 127.0.0.1
 cron::jobs:
     first_job:
         command: '/bin/echo "this is the first cron jobs" >> /tmp/cron.out'   
-        minute:  '37'
+        minute:  '52'
         hour:    '12'
         month:   '*'
         weekday: '*'
         user:    'root'
+        environment:
+            - 'MAILTO=root'
+            - 'PATH="/usr/bin:/bin"'
