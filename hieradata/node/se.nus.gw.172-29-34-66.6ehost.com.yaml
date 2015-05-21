@@ -2,11 +2,11 @@
 classes:
   - ntp
   - shellexecution
-  - zabbix-agent
+  - zabbix::agent
 ntp::restrict:
   -
 ntp::autoupdate: false
 ntp::enable: true
 ntp::servers:
   - se.nus.gw.172-29-34-66.6ehost.com
-zabbix-agent::server: 127.0.0.1
+zabbix::agent::server: 127.0.0.1
