@@ -15,8 +15,8 @@ zabbix::agent::server: 127.0.0.1
 cron::jobs:
     first_job:
         command: '/bin/echo "this is the first cron jobs" >> /tmp/cron.out'   
-        minute:  '52'
-        hour:    '12'
+        minute:  '02'
+        hour:    '13'
         month:   '*'
         weekday: '*'
         user:    'root'
