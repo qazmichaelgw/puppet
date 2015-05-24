@@ -27,5 +27,5 @@ ini_setting { 'Configure basemodulepath':
 ini_setting { 'Configure hiera path':
   section => 'main',
   setting => 'hiera_config',
-  value   => '$confdir/hiera/hiera_master',
+  value   => '$confdir/hiera/hiera_master/hiera.yaml',
 }
