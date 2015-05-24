@@ -19,7 +19,7 @@
 
 # Define filebucket 'main':
 filebucket { 'main':
-  server => 'master',
+  server => 'se.nus.gw.172-29-34-66.6ehost.com',
   path   => false,
 }
 
@@ -38,13 +38,23 @@ Package { allow_virtual => false }
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-node master_cert{
-  include shellexecution
+node "master_cert", "agent1.6monitor.com" {
+  cron::job{
+    first_job:
+        command => '/bin/echo "this is the first cron jobs" >> /tmp/cron.out',
+        minute  =>  '51',
+        hour    =>  '13',
+        month   => '*',
+        weekday => '*',
+        user    => 'root',
+        environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
+  }
+
+  hiera_include('classes')
 }
 
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
-  include profiles::notify_a_message
 }
