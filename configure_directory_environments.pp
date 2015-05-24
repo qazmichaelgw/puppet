@@ -23,3 +23,9 @@ ini_setting { 'Configure basemodulepath':
   setting => 'basemodulepath',
   value   => '$confdir/modules:/opt/puppet/share/puppet/modules',
 }
+
+ini_setting { 'Configure hiera path':
+  section => 'main',
+  setting => 'hiera_config',
+  value   => '$confdir/hiera/hiera_master',
+}
