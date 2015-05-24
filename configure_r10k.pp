@@ -13,6 +13,11 @@ class { 'r10k':
       'remote'  => 'https://github.com/qazmichaelgw/puppet.git',
       'basedir' => "${::settings::confdir}/environments",
       'prefix'  => false,
+    },
+    'hiera'  => {
+      'remote'  => 'https://github.com/glarizza/hiera_environment.git',
+      'basedir' => "${::settings::confdir}/hiera",
+      'prefix'  => true,
     }
   },
   purgedirs         => ["${::settings::confdir}/environments"],
