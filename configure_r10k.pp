@@ -15,8 +15,8 @@ class { 'r10k':
       'prefix'  => false,
     },
     'hiera'  => {
-      'remote'  => 'https://github.com/glarizza/hiera_environment.git',
-      'basedir' => "${::settings::confdir}/hiera",
+      'remote'  => 'https://github.com/qazmichaelgw/hiera.git',
+      'basedir' => "${::settings::confdir}",
       'prefix'  => true,
     }
   },
