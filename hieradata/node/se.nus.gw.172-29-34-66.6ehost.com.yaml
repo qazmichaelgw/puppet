@@ -5,7 +5,6 @@ classes:
   - shellsync
   - zabbix::agent
   - cron
-  - ::mcollective
 ntp::restrict:
   -
 ntp::autoupdate: false

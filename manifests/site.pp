@@ -39,7 +39,7 @@ Package { allow_virtual => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 node "agent1.6monitor.com" {
-  #hiera_include('classes')
+  hiera_include('classes')
 }
 node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
   cron::job{
@@ -53,17 +53,17 @@ node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
         environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
   }
   
-  class { 'java':
-	distribution => ‘jdk’,
-	version => ‘latest’,
-  }
-
-  class {'activemq':}
-  class {'::mcollective':
-        client 		 => true,
-	middleware_hosts => ['se.nus.gw.172-29-34-66.6ehost.com'],
-  }
-  #hiera_include('classes')
+  #class { 'java':
+  #	distribution => ‘jdk’,
+#	version => ‘latest’,
+#  }
+#
+#  class {'activemq':}
+#  class {'::mcollective':
+#        client 		 => true,
+#	middleware_hosts => ['se.nus.gw.172-29-34-66.6ehost.com'],
+#  }
+  hiera_include('classes')
 }
 
 node default {
