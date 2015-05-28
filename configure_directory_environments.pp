@@ -21,7 +21,7 @@ ini_setting { 'Configure environmentpath':
 ini_setting { 'Configure basemodulepath':
   section => 'main',
   setting => 'basemodulepath',
-  value   => '$confdir/modules:/opt/puppet/share/puppet/modules',
+  value   => '$confdir/modules',
 }
 
 ini_setting { 'Configure hiera path':
@@ -29,3 +29,4 @@ ini_setting { 'Configure hiera path':
   setting => 'hiera_config',
   value   => '$confdir/hiera/hiera_master/hiera.yaml',
 }
+
