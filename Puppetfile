@@ -26,8 +26,8 @@ mod 'shellexecution',
 mod 'shellsync',
    :git => 'https://github.com/qazmichaelgw/shellsync.git'
 
-mod 'activemq'
-   :git => 'https://github.com/puppetlabs/puppetlabs-activemq.git'	
+mod 'activemq',
+   :git => 'https://github.com/puppetlabs/puppetlabs-activemq.git',	
 
 mod 'mcollective',
    :git => 'https://github.com/puppet-community/puppet-mcollective.git'
