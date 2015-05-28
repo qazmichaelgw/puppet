@@ -52,6 +52,13 @@ node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
         user    => 'root',
         environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
   }
+  
+  class { 'java':
+	distribution => ‘jdk’,
+	version => ‘latest’,
+  }
+
+  class {'activemq':}
   class {'::mcollective':
         client 		 => true,
 	middleware_hosts => ['se.nus.gw.172-29-34-66.6ehost.com'],
