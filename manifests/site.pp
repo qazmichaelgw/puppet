@@ -38,7 +38,10 @@ Package { allow_virtual => false }
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-node "master_cert", "agent1.6monitor.com", "se.nus.gw.172-29-34-66.6ehost.com" {
+node "agent1.6monitor.com" {
+  #hiera_include('classes')
+}
+node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
   cron::job{
     first_job:
         command => '/bin/echo "this is the first cron jobs" >> /tmp/cron.out',
@@ -49,8 +52,11 @@ node "master_cert", "agent1.6monitor.com", "se.nus.gw.172-29-34-66.6ehost.com" {
         user    => 'root',
         environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
   }
-
-  hiera_include('classes')
+  class {'::mcollective':
+        client 		 => true,
+	middleware_hosts => ['se.nus.gw.172-29-34-66.6ehost.com'],
+  }
+  #hiera_include('classes')
 }
 
 node default {
