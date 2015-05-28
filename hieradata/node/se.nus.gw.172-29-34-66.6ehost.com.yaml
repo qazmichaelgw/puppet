@@ -5,6 +5,7 @@ classes:
   - shellsync
   - zabbix::agent
   - cron
+  - ::mcollective
 ntp::restrict:
   -
 ntp::autoupdate: false
@@ -23,3 +24,8 @@ cron::job:
         environment:
             - 'MAILTO=root'
             - 'PATH="/usr/bin:/bin"'
+::mcollective:
+   middleware_hosts:
+     - 'se.nus.gw.172-29-34-66.6ehost.com'
+::mcollective::client: true
+::mcollective::middleware: true
