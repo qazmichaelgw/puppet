@@ -38,20 +38,20 @@ Package { allow_virtual => false }
 # definition. If there are no other nodes in this file, classes declared here
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
-node "agent1.6monitor.com" {
-  hiera_include('classes')
-}
-node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
-  cron::job{
-    first_job:
-        command => '/bin/echo "this is the first cron jobs" >> /tmp/cron.out',
-        minute  =>  '51',
-        hour    =>  '13',
-        month   => '*',
-        weekday => '*',
-        user    => 'root',
-        environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
-  }
+#node "agent1.6monitor.com" {
+#  hiera_include('classes')
+#}
+#node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
+#  cron::job{
+#    first_job:
+#        command => '/bin/echo "this is the first cron jobs" >> /tmp/cron.out',
+#        minute  =>  '51',
+#        hour    =>  '13',
+#        month   => '*',
+#        weekday => '*',
+#        user    => 'root',
+#        environment => ['MAILTO=root', 'PATH="/usr/bin:/bin"'],
+#  }
   
   #class { 'java':
   #	distribution => ‘jdk’,
@@ -63,11 +63,12 @@ node "master_cert", "se.nus.gw.172-29-34-66.6ehost.com" {
 #        client 		 => true,
 #	middleware_hosts => ['se.nus.gw.172-29-34-66.6ehost.com'],
 #  }
-  hiera_include('classes')
-}
+#  hiera_include('classes')
+#}
 
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
+  hiera_include('classes')
 }
