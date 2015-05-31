@@ -28,3 +28,4 @@ cron::job:
      - 'se.nus.gw.172-29-34-66.6ehost.com'
 ::mcollective::client: true
 ::mcollective::middleware: true
+shellsync::agent_target_dir:'/tmp/hiera_test'
